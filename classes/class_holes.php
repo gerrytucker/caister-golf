@@ -59,15 +59,9 @@ class Golf_Holes
 
         foreach ( $posts as $post ) {
             // Get post thumbnail
-            $thumbnail = wp_get_attachment_image_src(
-                get_post_thumbnail_id($post->ID), 'thumbnail', false
-            );
-            $medium = wp_get_attachment_image_src(
-                get_post_thumbnail_id($post->ID), 'medium', false
-            );
-            $large = wp_get_attachment_image_src(
-                get_post_thumbnail_id($post->ID), 'large', false
-            );
+            $thumbnail = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'thumbnail', false );
+            $medium = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'medium', false );
+            $large = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'large', false );
   
             $response[] = array(
                 'id'                => $post->ID,
@@ -107,15 +101,9 @@ class Golf_Holes
 
         foreach ( $posts as $post ) {
             // Get post thumbnail
-            $thumbnail = wp_get_attachment_image_src(
-                get_post_thumbnail_id($post->ID), 'thumbnail', false
-            );
-            $medium = wp_get_attachment_image_src(
-                get_post_thumbnail_id($post->ID), 'medium', false
-            );
-            $large = wp_get_attachment_image_src(
-                get_post_thumbnail_id($post->ID), 'large', false
-            );
+            $thumbnail = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'thumbnail', false );
+            $medium = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'medium', false );
+            $large = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'large', false );
   
             $response[] = array(
                 'id'                => $post->ID,
