@@ -21,7 +21,7 @@
  * @link     https://gerrytucker.co.uk/plugins/caister-golf
  * @since    1.0.0
  */
-class Caister_Golf
+class Golf_Holes
 {
 
     /**
@@ -48,7 +48,9 @@ class Caister_Golf
 
         $posts = get_posts(
             array(
-                'numberposts'  => -1
+                'numberposts'   => -1,
+                'post_type'     => 'holes',
+                'orderby'       => 'ID'
             )
         );
 

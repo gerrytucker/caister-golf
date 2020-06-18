@@ -16,7 +16,7 @@
  * Plugin URI:        https://gerrytucker.co.uk/plugins/caister-golf
  * GitHub Plugin URI: https://github.com/gerrytucker/caister-golf
  * Description:       Caister Golf Course plugin
- * Version:           1.1.0
+ * Version:           1.3.0
  * Author:            Gerry Tucker
  * Author URI:        https://gerrytucker@gerrytucker.co.uk
  * License:           GPL-2.0+
@@ -113,7 +113,7 @@ class WP_Caister_Golf
 
         $wp = new Golf_Holes();
 
-        if ($posts = $wp->getPosts() ) {
+        if ($posts = $wp->getHoles() ) {
             return new WP_REST_Response($posts, 200);
         } else {
             // return an 404 empty result set
@@ -135,7 +135,7 @@ class WP_Caister_Golf
 
         $wp = new Golf_Holes();
 
-        if ($post = $wp->getPost($holeid) ) {
+        if ($post = $wp->getHole($holeid) ) {
             return new WP_REST_Response($post, 200);
         } else {
             // return an 404 empty result set
@@ -208,7 +208,7 @@ class WP_Caister_Golf
      */
     static function init() 
     {
-        add_action( 'init', 'register_post_types', 0 );
+        add_action( 'init', array('WP_Caister_Golf', 'register_post_types'), 0 );
         register_activation_hook(__FILE__, array( 'WP_Caister_Golf', 'activate' ));
         add_action('rest_api_init', array( 'WP_Caister_Golf', 'registerApiHooks' ));
     }
