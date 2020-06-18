@@ -50,7 +50,8 @@ class Golf_Holes
             array(
                 'numberposts'   => -1,
                 'post_type'     => 'holes',
-                'orderby'       => 'ID'
+                'orderby'       => 'ID',
+                'order'         => 'ASC'
             )
         );
 
@@ -75,6 +76,9 @@ class Golf_Holes
                 'thumbnail_url'   => $thumbnail[0],
                 'medium_url'      => $medium[0],
                 'large_url'       => $large[0],
+                'red_yardage'     => $post->red_yardage,
+                'red_par'         => $post->red_par,
+                'red_si'          => $post->red_si,
             );
         }
 
