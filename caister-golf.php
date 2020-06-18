@@ -16,7 +16,7 @@
  * Plugin URI:        https://gerrytucker.co.uk/plugins/caister-golf
  * GitHub Plugin URI: https://github.com/gerrytucker/caister-golf
  * Description:       Caister Golf Course plugin
- * Version:           1.3.0
+ * Version:           1.3.1
  * Author:            Gerry Tucker
  * Author URI:        https://gerrytucker@gerrytucker.co.uk
  * License:           GPL-2.0+
