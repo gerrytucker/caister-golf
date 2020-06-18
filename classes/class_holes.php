@@ -70,15 +70,19 @@ class Golf_Holes
             );
   
             $response[] = array(
-                'id'              => $post->ID,
-                'title'            => $post->post_title,
-                'link'            => '/hole/' . $post->ID, 
-                'thumbnail_url'   => $thumbnail[0],
-                'medium_url'      => $medium[0],
-                'large_url'       => $large[0],
-                'red_yardage'     => $post->red_yardage,
-                'red_par'         => $post->red_par,
-                'red_si'          => $post->red_si,
+                'id'                => $post->ID,
+                'title'             => $post->post_title,
+                'link'              => '/hole/' . $post->ID, 
+                'thumbnail_url'     => $thumbnail[0],
+                'medium_url'        => $medium[0],
+                'large_url'         => $large[0],
+                'red_yardage'       => $post->red_yardage,
+                'red_par'           => $post->red_par,
+                'red_si'            => $post->red_si,
+                'green_yardage'     => $post->green_yardage,
+                'yellow_yardage'    => $post->yellow_yardage,
+                'green_yellow_par'  => $post->green_yellow_par,
+                'green_yellow_si'   => $post->green_yellow_si,
             );
         }
 
@@ -114,13 +118,20 @@ class Golf_Holes
             );
   
             $response[] = array(
-                'id'              => $post->ID,
-                'title'            => $post->post_title,
-                'content'         => apply_filters('the_content', $post->post_content),
-                'link'            => '/hole/' . $post->ID,
-                'thumbnail_url'   => $thumbnail[0],
-                'medium_url'      => $medium[0],
-                'large_url'       => $large[0],
+                'id'                => $post->ID,
+                'title'             => $post->post_title,
+                'content'           => apply_filters('the_content', $post->post_content),
+                'link'              => '/hole/' . $post->ID,
+                'thumbnail_url'     => $thumbnail[0],
+                'medium_url'        => $medium[0],
+                'large_url'         => $large[0],
+                'red_yardage'       => $post->red_yardage,
+                'red_par'           => $post->red_par,
+                'red_si'            => $post->red_si,
+                'green_yardage'     => $post->green_yardage,
+                'yellow_yardage'    => $post->yellow_yardage,
+                'green_yellow_par'  => $post->green_yellow_par,
+                'green_yellow_si'   => $post->green_yellow_si,
             );
         }
 
